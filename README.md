@@ -31,7 +31,7 @@ After installing import the package in to your javascript code.
 var randomProfile = require('random-profile-generator');
 ```
 
-## API Documentation
+# API Documentation
 
 ### profile()
 Returns a randomly generated user profile with `fullName`, `firstName`, `lastName`, `birthday`, `age`, `avatar`, `address`, `phone`, `email` and `twitter` as properties of the profile object.
@@ -171,14 +171,14 @@ All contributions from the GitHub community are welcome.
 $ npm install
 ```
 
-### Run Unit Tests Locally
+## Run Unit Tests Locally
 
 ```sh
 # Run mocha tests with -w flag
 $ npm run test:local
 ```
 
-### Code Coverage
+## Code Coverage
 
 [Istanbul](https://istanbul.js.org/) is used for code coverage analisys. [nyc](https://github.com/istanbuljs/nyc) command-line client is used to support ES6 with babel as the transpiler.
 To run unit tests with code coverage report, use the following command.
@@ -188,11 +188,11 @@ To run unit tests with code coverage report, use the following command.
 $ npm run cover
 ```
 
-### Code Quality
+## Code Quality
 
 [Codacy](https://www.codacy.com) is configured on Github for code quality analisys.
 
-### Git Commit Guidelines
+## Git Commit Guidelines
 
 A strict commit guidelines are followed so that its easy to do release with semantic versioning. [Semantic Release](https://github.com/semantic-release/semantic-release) package is used to do this. [Commitizen](https://www.npmjs.com/package/commitizen) is used with [Commitizen Conventional Changelog](https://www.npmjs.com/package/cz-conventional-changelog) to add proper commit messages. Git hooks  created using [ghooks](https://www.npmjs.com/package/ghooks) are inplace to enforce the commit format used in the project.
 Each commit message consists of a header, a body and a footer. The header has a special format that includes a type, a scope and a subject. The commit message format is bellow.
