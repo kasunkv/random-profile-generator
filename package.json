@@ -1,5 +1,5 @@
 {
-  "name": "building-open-source-library",
+  "name": "random-profile-generator",
   "version": "1.0.0",
   "description": "Generates a random user profile with all the common user profile items such as name, address, profile image etc.",
   "main": "src/index.js",
