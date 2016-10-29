@@ -8,7 +8,7 @@
     var allAddresses = require('../data/addresses.json');  
     
     var chance = new Chance();
-    var avatarBase = 'https://api.adorable.io/avatars/200/'
+    var avatarBase = 'https://api.adorable.io/avatars/200/';
 
     function profile() {
         var profile = {};
@@ -17,8 +17,8 @@
         var today = moment(new Date());
 
         profile.fullName = fullName;
-        profile.firstName = fullName.split(" ")[0];
-        profile.lastName = fullName.split(" ")[1];
+        profile.firstName = fullName.split(' ')[0];
+        profile.lastName = fullName.split(' ')[1];
         profile.birthday = bDay.format('MMM Do[,] YYYY');
         profile.age = today.diff(bDay, 'years');
         profile.avatar = avatarBase + fullName.replace(/ /g, '-');
