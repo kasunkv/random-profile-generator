@@ -66,6 +66,12 @@ describe('Random Profile Generator', () => {
             expect(randomProfiles.profile().twitter).to.be.a('string');
             expect(randomProfiles.profile().twitter).to.match(/([@][A-z]+)|([#][A-z]+)/);
         });
+
+        it('Should contain `ssn` property, it should a string and a valid SSN', () => {
+            expect(randomProfiles.profile()).to.have.property('ssn');
+            expect(randomProfiles.profile().ssn).to.be.a('string');
+            expect(randomProfiles.profile().ssn).to.match(/(\d{3}[-]\d{2}[-]\d{4})/);
+        });
     });
     
     describe('Calling `randomName`', () => {
@@ -173,6 +179,20 @@ describe('Random Profile Generator', () => {
 
         it('Should return a string that is a valid twitter handle', () => {
             expect(randomProfiles.randomTwitter()).to.match(/([@][A-z]+)|([#][A-z]+)/);
+        });
+    });
+
+    describe('Calling `randomSSN`', () => {
+        it('Should be a function', () => {
+            expect(randomProfiles.randomSSN).to.be.a('function');
+        });
+
+        it('Should return a type string', () => {
+            expect(randomProfiles.randomSSN()).to.be.a('string');
+        });
+
+        it('Should return a string that is a valid twitter handle', () => {
+            expect(randomProfiles.randomSSN()).to.match(/(\d{3}[-]\d{2}[-]\d{4})/);
         });
     }); 
 });
