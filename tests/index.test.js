@@ -1,8 +1,8 @@
 var expect = require('chai').expect;
 var randomProfiles = require('../src/index');
 
-var allNames = require('../src/names.json');
-var allAddresses = require('../src/addresses.json');
+var allNames = require('../data/names.json');
+var allAddresses = require('../data/addresses.json');
 
 describe('Random Profile Generator', function () {
     describe('Calling `profile`', function () {
