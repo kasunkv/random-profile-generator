@@ -58,11 +58,11 @@ console.log(profile);
 */
 ```
 
-### randomeName()
+### name()
 Returns a random name with first name and last name.
 
 ```js
-var name = randomProfile.randomName();
+var name = randomProfile.name();
 console.log(name);
 
 // Output
@@ -70,11 +70,11 @@ console.log(name);
 ```
 
 
-### randomAddress()
+### address()
 Returns a random address with street, city, State and Zip Code
 
 ```js
-var address = randomProfile.randomAddress();
+var address = randomProfile.address();
 console.log(address);
 
 // Output
@@ -82,11 +82,11 @@ console.log(address);
 ```
 
 
-### randomBirthday()
+### birthday()
 Returns a random birthday in the `MMM Do[,] YYYY` format.
 
 ```js
-var birthday = randomProfile.randomBirthday();
+var birthday = randomProfile.birthday();
 console.log(birthday);
 
 // Output
@@ -94,11 +94,11 @@ console.log(birthday);
 ```
 
 
-### randomAge()
+### age()
 Returns a random age.
 
 ```js
-var age = randomProfile.randomAge();
+var age = randomProfile.age();
 console.log(age);
 
 // Output
@@ -106,11 +106,11 @@ console.log(age);
 ```
 
 
-### randomAvatar()
+### avatar()
 Returns a random avatar url generated from adorable.io API with a 200 x 200px size.
 
 ```js
-var avatar = randomProfile.randomAvatar();
+var avatar = randomProfile.avatar();
 console.log(avatar);
 
 // Output
@@ -118,11 +118,11 @@ console.log(avatar);
 ```
 
 
-### randomPhone()
+### phone()
 Returns a random phone number with US Phone Number Format.
 
 ```js
-var phone = randomProfile.randomPhone();
+var phone = randomProfile.phone();
 console.log(phone);
 
 // Output
@@ -130,11 +130,11 @@ console.log(phone);
 ```
 
 
-### randomEmail()
+### email()
 Returns a random syntactically valid email address.
 
 ```js
-var email = randomProfile.randomEmail();
+var email = randomProfile.email();
 console.log(email);
 
 // Output
@@ -142,11 +142,23 @@ console.log(email);
 ```
 
 
-### randomTwitter()
+### ssn()
+Returns a random SSN.
+
+```js
+var ssn = randomProfile.ssn();
+console.log(ssn);
+
+// Output
+// => 411-90-0070
+```
+
+
+### twitter()
 Returns a random twitter handle.
 
 ```js
-var twitterHandle = randomProfile.randomTwitter();
+var twitterHandle = randomProfile.twitter();
 console.log(twitterHandle);
 
 // Output
