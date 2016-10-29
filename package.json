@@ -1,0 +1,28 @@
+{
+  "name": "building-open-source-library",
+  "version": "1.0.0",
+  "description": "A test repository to learn about how to build an open source repository with proper tools and integrations hooked in.",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kasunkv/building-open-source-library.git"
+  },
+  "keywords": [
+    "npm",
+    "github"
+  ],
+  "author": "Kasun Kodagoda <'kvkrusl@gmail.com'>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kasunkv/building-open-source-library/issues"
+  },
+  "homepage": "https://github.com/kasunkv/building-open-source-library#readme",
+  "dependencies": {
+    "chance": "1.0.4",
+    "moment": "2.15.2",
+    "unique-random-array": "1.0.0"
+  }
+}
