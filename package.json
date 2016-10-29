@@ -8,18 +8,25 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kasunkv/building-open-source-library.git"
+    "url": "git+https://github.com/kasunkv/random-profile-generator.git"
   },
   "keywords": [
-    "npm",
-    "github"
+    "random",
+    "random-profiles",
+    "mock user profiles",
+    "user profiles",
+    "profile data",
+    "mock data",
+    "mock json profiles",
+    "random names",
+    "random addresses"
   ],
   "author": "Kasun Kodagoda <'kvkrusl@gmail.com'>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/kasunkv/building-open-source-library/issues"
+    "url": "https://github.com/kasunkv/random-profile-generator/issues"
   },
-  "homepage": "https://github.com/kasunkv/building-open-source-library#readme",
+  "homepage": "https://github.com/kasunkv/random-profile-generator#readme",
   "dependencies": {
     "chance": "1.0.4",
     "moment": "2.15.2",
