@@ -4,8 +4,8 @@
     var Chance = require('chance');
     var moment = require('moment');
     var uniqueRandomArray = require('unique-random-array');
-    var allNames = require('./names.json');
-    var allAddresses = require('./addresses.json');  
+    var allNames = require('../data/names.json');
+    var allAddresses = require('../data/addresses.json');  
     
     var chance = new Chance();
     var avatarBase = 'https://api.adorable.io/avatars/200/'
