@@ -1,7 +1,7 @@
 {
   "name": "building-open-source-library",
   "version": "1.0.0",
-  "description": "A test repository to learn about how to build an open source repository with proper tools and integrations hooked in.",
+  "description": "Generates a random user profile with all the common user profile items such as name, address, profile image etc.",
   "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
