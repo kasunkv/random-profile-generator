@@ -74,125 +74,125 @@ describe('Random Profile Generator', () => {
         });
     });
     
-    describe('Calling `randomName`', () => {
+    describe('Calling `name`', () => {
         it('Should be a function', () => {
-            expect(randomProfiles.randomName).to.be.a('function'); 
+            expect(randomProfiles.name).to.be.a('function'); 
         });
 
         it('Should return a string', () => {
-            expect(randomProfiles.randomName()).to.be.a('string');
+            expect(randomProfiles.name()).to.be.a('string');
         });
 
         it('Should include in the names array', () => {
-            expect(allNames).to.include(randomProfiles.randomName()); 
+            expect(allNames).to.include(randomProfiles.name()); 
         });
     });
 
-    describe('Calling `randomAddress', () => {
+    describe('Calling `address', () => {
         it('Should be a function', () => {
-            expect(randomProfiles.randomAddress).to.be.a('function'); 
+            expect(randomProfiles.address).to.be.a('function'); 
         });
 
         it('Should return a string', () => {
-            expect(randomProfiles.randomAddress()).to.be.a('string');
+            expect(randomProfiles.address()).to.be.a('string');
         });
 
         it('Should include in the names array', () => {
-            expect(allAddresses).to.include(randomProfiles.randomAddress()); 
+            expect(allAddresses).to.include(randomProfiles.address()); 
         });
     });
 
-    describe('Calling `randomAge`', () => {
+    describe('Calling `age`', () => {
         it('Should be a function', () => {
-            expect(randomProfiles.randomAge).to.be.a('function');
+            expect(randomProfiles.age).to.be.a('function');
         });
 
         it('Should return a number', () => {
-            expect(randomProfiles.randomAge()).to.be.a('number');
+            expect(randomProfiles.age()).to.be.a('number');
         });
     });
 
-    describe('Calling `randomAvatar`', () => {
+    describe('Calling `avatar`', () => {
         it('Should be a function', () => {
-            expect(randomProfiles.randomAvatar).to.be.a('function');
+            expect(randomProfiles.avatar).to.be.a('function');
         });
 
         it('Should return a type string', () => {
-            expect(randomProfiles.randomAvatar()).to.be.a('string');
+            expect(randomProfiles.avatar()).to.be.a('string');
         });
 
         it('Should return a string that is a valid url', () => {
-            expect(randomProfiles.randomAvatar()).to.match(/https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,4}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/);
+            expect(randomProfiles.avatar()).to.match(/https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,4}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/);
         });
     });
 
-    describe('Calling `randomPhone`', () => {
+    describe('Calling `phone`', () => {
         it('Should be a function', () => {
-            expect(randomProfiles.randomPhone).to.be.a('function');
+            expect(randomProfiles.phone).to.be.a('function');
         });
 
         it('Should return a type string', () => {
-            expect(randomProfiles.randomPhone()).to.be.a('string');
+            expect(randomProfiles.phone()).to.be.a('string');
         });
 
         it('Should return a string that is a valid url', () => {
-            expect(randomProfiles.randomPhone()).to.match(/(\(\d{3}\) )?(\d{3}-){1,2}(\d{4})/);
+            expect(randomProfiles.phone()).to.match(/(\(\d{3}\) )?(\d{3}-){1,2}(\d{4})/);
         });
     });
 
-    describe('Calling `randomBirthday`', () => {
+    describe('Calling `birthday`', () => {
         it('Should be a function', () => {
-            expect(randomProfiles.randomBirthday).to.be.a('function');
+            expect(randomProfiles.birthday).to.be.a('function');
         });
 
         it('Should return a type string', () => {
-            expect(randomProfiles.randomBirthday()).to.be.a('string');
+            expect(randomProfiles.birthday()).to.be.a('string');
         });
 
         it('Should return a string that is a valid date', () => {
-            expect(randomProfiles.randomBirthday()).to.match(/[A-Z]{1}[a-z]{2} \d{1,2}[a-z]{2}, \d{4}/);
+            expect(randomProfiles.birthday()).to.match(/[A-Z]{1}[a-z]{2} \d{1,2}[a-z]{2}, \d{4}/);
         });
     }); 
     
-    describe('Calling `randomEmail`', () => {
+    describe('Calling `email`', () => {
         it('Should be a function', () => {
-            expect(randomProfiles.randomEmail).to.be.a('function');
+            expect(randomProfiles.email).to.be.a('function');
         });
 
         it('Should return a type string', () => {
-            expect(randomProfiles.randomEmail()).to.be.a('string');
+            expect(randomProfiles.email()).to.be.a('string');
         });
 
         it('Should return a string that is a valid email', () => {
-            expect(randomProfiles.randomEmail()).to.match(/^(?:(?:[\w`~!#$%^&*\-=+;:{}'|,?\/]+(?:(?:\.(?:"(?:\\?[\w`~!#$%^&*\-=+;:{}'|,?\/\.()<>\[\] @]|\\"|\\\\)*"|[\w`~!#$%^&*\-=+;:{}'|,?\/]+))*\.[\w`~!#$%^&*\-=+;:{}'|,?\/]+)?)|(?:"(?:\\?[\w`~!#$%^&*\-=+;:{}'|,?\/\.()<>\[\] @]|\\"|\\\\)+"))@(?:[a-zA-Z\d\-]+(?:\.[a-zA-Z\d\-]+)*|\[\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}\])$/);
+            expect(randomProfiles.email()).to.match(/^(?:(?:[\w`~!#$%^&*\-=+;:{}'|,?\/]+(?:(?:\.(?:"(?:\\?[\w`~!#$%^&*\-=+;:{}'|,?\/\.()<>\[\] @]|\\"|\\\\)*"|[\w`~!#$%^&*\-=+;:{}'|,?\/]+))*\.[\w`~!#$%^&*\-=+;:{}'|,?\/]+)?)|(?:"(?:\\?[\w`~!#$%^&*\-=+;:{}'|,?\/\.()<>\[\] @]|\\"|\\\\)+"))@(?:[a-zA-Z\d\-]+(?:\.[a-zA-Z\d\-]+)*|\[\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}\])$/);
         });
     }); 
 
-    describe('Calling `randomTwitter`', () => {
+    describe('Calling `twitter`', () => {
         it('Should be a function', () => {
-            expect(randomProfiles.randomTwitter).to.be.a('function');
+            expect(randomProfiles.twitter).to.be.a('function');
         });
 
         it('Should return a type string', () => {
-            expect(randomProfiles.randomTwitter()).to.be.a('string');
+            expect(randomProfiles.twitter()).to.be.a('string');
         });
 
         it('Should return a string that is a valid twitter handle', () => {
-            expect(randomProfiles.randomTwitter()).to.match(/([@][A-z]+)|([#][A-z]+)/);
+            expect(randomProfiles.twitter()).to.match(/([@][A-z]+)|([#][A-z]+)/);
         });
     });
 
-    describe('Calling `randomSSN`', () => {
+    describe('Calling `ssn`', () => {
         it('Should be a function', () => {
-            expect(randomProfiles.randomSSN).to.be.a('function');
+            expect(randomProfiles.ssn).to.be.a('function');
         });
 
         it('Should return a type string', () => {
-            expect(randomProfiles.randomSSN()).to.be.a('string');
+            expect(randomProfiles.ssn()).to.be.a('string');
         });
 
         it('Should return a string that is a valid twitter handle', () => {
-            expect(randomProfiles.randomSSN()).to.match(/(\d{3}[-]\d{2}[-]\d{4})/);
+            expect(randomProfiles.ssn()).to.match(/(\d{3}[-]\d{2}[-]\d{4})/);
         });
     }); 
 });

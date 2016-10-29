@@ -57,14 +57,14 @@ function ssn() {
 }
 
 module.exports = {
-    profile: profile,
-    randomName: uniqueRandomArray(allNames),
-    randomAddress: uniqueRandomArray(allAddresses),
-    randomBirthday: birthday,
-    randomAge: age,
-    randomAvatar: avatar,
-    randomPhone: phone,
-    randomEmail: email,
-    randomTwitter: twitter,
-    randomSSN: ssn
+    profile,
+    name: uniqueRandomArray(allNames),
+    address: uniqueRandomArray(allAddresses),
+    birthday,
+    age,
+    avatar,
+    phone,
+    email,
+    twitter,
+    ssn
 };
