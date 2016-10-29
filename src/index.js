@@ -24,6 +24,8 @@
         profile.avatar = avatarBase + fullName.replace(/ /g, '-');
         profile.address = uniqueRandomArray(allAddresses)();
         profile.phone = chance.phone();
+        profile.email = chance.email();
+        profile.twitter = chance.twitter();
         
         return profile;
     }
@@ -44,6 +46,14 @@
         return chance.phone();
     }
 
+    function email() {
+        return chance.email();
+    }
+
+    function twitter() {
+        return chance.twitter();
+    }
+
     module.exports = {
         profile: profile,
         randomName: uniqueRandomArray(allNames),
@@ -51,6 +61,8 @@
         randomBirthday: birthday,
         randomAge: age,
         randomAvatar: avatar,
-        randomPhone: phone
+        randomPhone: phone,
+        randomEmail: email,
+        randomTwitter: twitter
     };
 })();

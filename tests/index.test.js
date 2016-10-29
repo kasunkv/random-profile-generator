@@ -55,6 +55,18 @@ describe('Random Profile Generator', function () {
             expect(randomProfiles.profile().phone).to.be.a('string');
             expect(randomProfiles.profile().phone).to.match(/(\(\d{3}\) )?(\d{3}-){1,2}(\d{4})/);
         });
+
+        it('Should contain `email` property, it should a string and a valid email address', function () {
+            expect(randomProfiles.profile()).to.have.property('email');
+            expect(randomProfiles.profile().email).to.be.a('string');
+            expect(randomProfiles.profile().email).to.match(/^(?:(?:[\w`~!#$%^&*\-=+;:{}'|,?\/]+(?:(?:\.(?:"(?:\\?[\w`~!#$%^&*\-=+;:{}'|,?\/\.()<>\[\] @]|\\"|\\\\)*"|[\w`~!#$%^&*\-=+;:{}'|,?\/]+))*\.[\w`~!#$%^&*\-=+;:{}'|,?\/]+)?)|(?:"(?:\\?[\w`~!#$%^&*\-=+;:{}'|,?\/\.()<>\[\] @]|\\"|\\\\)+"))@(?:[a-zA-Z\d\-]+(?:\.[a-zA-Z\d\-]+)*|\[\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}\])$/);
+        });
+
+        it('Should contain `twitter` property, it should a string and a valid twitter handle', function () {
+            expect(randomProfiles.profile()).to.have.property('twitter');
+            expect(randomProfiles.profile().twitter).to.be.a('string');
+            expect(randomProfiles.profile().twitter).to.match(/([@][A-z]+)|([#][A-z]+)/);
+        });
     });
     
     describe('Calling `randomName`', function () {
@@ -135,5 +147,33 @@ describe('Random Profile Generator', function () {
         it('Should return a string that is a valid date', function () {
             expect(randomProfiles.randomBirthday()).to.match(/[A-Z]{1}[a-z]{2} \d{1,2}[a-z]{2}, \d{4}/);
         });
-    });    
+    }); 
+    
+    describe('Calling `randomEmail`', function () {
+        it('Should be a function', function () {
+            expect(randomProfiles.randomEmail).to.be.a('function');
+        });
+
+        it('Should return a type string', function () {
+            expect(randomProfiles.randomEmail()).to.be.a('string');
+        });
+
+        it('Should return a string that is a valid email', function () {
+            expect(randomProfiles.randomEmail()).to.match(/^(?:(?:[\w`~!#$%^&*\-=+;:{}'|,?\/]+(?:(?:\.(?:"(?:\\?[\w`~!#$%^&*\-=+;:{}'|,?\/\.()<>\[\] @]|\\"|\\\\)*"|[\w`~!#$%^&*\-=+;:{}'|,?\/]+))*\.[\w`~!#$%^&*\-=+;:{}'|,?\/]+)?)|(?:"(?:\\?[\w`~!#$%^&*\-=+;:{}'|,?\/\.()<>\[\] @]|\\"|\\\\)+"))@(?:[a-zA-Z\d\-]+(?:\.[a-zA-Z\d\-]+)*|\[\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}\])$/);
+        });
+    }); 
+
+    describe('Calling `randomTwitter`', function () {
+        it('Should be a function', function () {
+            expect(randomProfiles.randomTwitter).to.be.a('function');
+        });
+
+        it('Should return a type string', function () {
+            expect(randomProfiles.randomTwitter()).to.be.a('string');
+        });
+
+        it('Should return a string that is a valid twitter handle', function () {
+            expect(randomProfiles.randomTwitter()).to.match(/([@][A-z]+)|([#][A-z]+)/);
+        });
+    }); 
 });
