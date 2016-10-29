@@ -1,14 +1,15 @@
 {
   "name": "random-profile-generator",
-  "version": "1.0.0",
   "description": "Generates a random user profile with all the common user profile items such as name, address, profile image etc.",
   "main": "src/index.js",
   "scripts": {
-    "test": "mocha tests/index.test.js -w"
+    "commit": "git-cz",
+    "test": "mocha tests/index.test.js",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kasunkv/random-profile-generator.git"
+    "url": "https://github.com/kasunkv/random-profile-generator.git"
   },
   "keywords": [
     "random",
@@ -34,6 +35,12 @@
   },
   "devDependencies": {
     "chai": "3.5.0",
-    "mocha": "3.1.2"
+    "commitizen": "2.8.6",
+    "cz-conventional-changelog": "1.2.0",
+    "mocha": "3.1.2",
+    "semantic-release": "^4.3.5"
+  },
+  "czConfig": {
+    "path": "node_modules/cz-conventional-changelog"
   }
 }
