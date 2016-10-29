@@ -2,3 +2,4 @@ node_modules/
 *.ts
 tsconfig.json
 npm-debug.log
+coverage/
