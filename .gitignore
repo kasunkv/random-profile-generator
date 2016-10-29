@@ -3,3 +3,5 @@ node_modules/
 tsconfig.json
 npm-debug.log
 coverage/
+dist/
+.nyc_output/
