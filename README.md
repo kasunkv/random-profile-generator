@@ -1,2 +1,3 @@
-# building-open-source-library
-A test repository to learn about how to build an open source repository with proper tools and integrations hooked in.
+# Random Profile Generator
+Generates a random user profile with all the common user profile items such as name, address, profile image etc. 
+You can generate a complete profile or a generate individual profile properties such as name or address.
