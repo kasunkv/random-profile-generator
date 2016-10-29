@@ -6,6 +6,7 @@
     "commit": "git-cz",
     "test": "istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec tests/index.test.js",
     "test:local": "mocha tests/index.test.js -w",
+    "check-coverage": "istanbul check-coverage --statements 100 --branches 100 --functions 100 --lines 100",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
   "repository": {
@@ -48,7 +49,7 @@
   },
   "config": {
     "ghooks": {
-      "pre-commit": "npm run test"
+      "pre-commit": "npm run test && npm run check-coverage"
     }
   }
 }
