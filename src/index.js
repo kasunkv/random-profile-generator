@@ -23,6 +23,7 @@ function profile() {
     profile.phone = chance.phone();
     profile.email = chance.email();
     profile.twitter = chance.twitter();
+    profile.ssn = chance.ssn();
     
     return profile;
 }
@@ -51,6 +52,10 @@ function twitter() {
     return chance.twitter();
 }
 
+function ssn() {
+    return chance.ssn();
+}
+
 module.exports = {
     profile: profile,
     randomName: uniqueRandomArray(allNames),
@@ -60,5 +65,6 @@ module.exports = {
     randomAvatar: avatar,
     randomPhone: phone,
     randomEmail: email,
-    randomTwitter: twitter
+    randomTwitter: twitter,
+    randomSSN: ssn
 };
