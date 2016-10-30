@@ -52,6 +52,8 @@ console.log(profile);
     age: 57,
     avatar: 'https://api.adorable.io/avatars/200/Della-Edwards',
     address: '49 Foxrun St., Manchester Township, NJ 08759',
+    zip: '08759',
+    state: 'NJ',
     phone: '(876) 547-1223',
     email: 'cedi@to.cc',
     twitter: '@wunwegda',
@@ -77,6 +79,8 @@ console.log(profile);
     age: 51,
     avatar: 'https://api.adorable.io/avatars/200/Emerson-Nicholson',
     address: '431 Front St., Eastpointe, MI 48021',
+    zip: '48021',
+    state: 'MI',
     phone: '(362) 561-9961',
     email: 'zu@culdisrik.lk',
     twitter: '@ig',
@@ -101,6 +105,8 @@ console.log(profile);
     age: 37,
     avatar: 'https://api.adorable.io/avatars/200/Julie-Lewis',
     address: '234 E. Bridle Ave., Gloucester, MA 01930',
+    zip: '01930',
+    state: 'MA',
     phone: '(766) 519-6284',
     email: 'ruszon@mo.et',
     twitter: '@seef',
@@ -154,6 +160,30 @@ console.log(address);
 
 // Output
 // => 87 North Constitution Circle, Rochester, NY 14606
+```
+
+
+### zip()
+Returns a random US Zip code
+
+```js
+var zip = randomProfile.zip();
+console.log(zip);
+
+// Output
+// => 14606
+```
+
+
+### state()
+Returns a random 2 letter abbreviation for US state
+
+```js
+var state = randomProfile.state();
+console.log(state);
+
+// Output
+// => NY
 ```
 
 
