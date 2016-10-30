@@ -47,6 +47,7 @@ console.log(profile);
     fullName: 'Della Edwards',
     firstName: 'Della',
     lastName: 'Edwards',
+    gender: 'Male',
     birthday: 'Mar 24th, 1959',
     age: 57,
     avatar: 'https://api.adorable.io/avatars/200/Della-Edwards',
@@ -58,9 +59,58 @@ console.log(profile);
 }
 */
 ```
+Also, profile supports generating `Male` or `Female` profiles by providing an argument. Argument must be `string`.
+
+### Calling with argument `male`
+```js
+var profile = randomProfile.profile('male');
+console.log(profile);
+
+// Output
+/*
+{ 
+    fullName: 'Emerson Nicholson', // <= Fullname is MALE name.
+    firstName: 'Emerson',
+    lastName: 'Nicholson',
+    gender: 'Male', // <= Gender is MALE
+    birthday: 'Jan 29th, 1965',
+    age: 51,
+    avatar: 'https://api.adorable.io/avatars/200/Emerson-Nicholson',
+    address: '431 Front St., Eastpointe, MI 48021',
+    phone: '(362) 561-9961',
+    email: 'zu@culdisrik.lk',
+    twitter: '@ig',
+    ssn: '981-02-7670' 
+}
+*/
+```
+### Calling with argument `female`
+
+```js
+var profile = randomProfile.profile('male');
+console.log(profile);
+
+// Output
+/*
+{ 
+    fullName: 'Julie Lewis', // <= Fullname is FEMALE name.
+    firstName: 'Julie',
+    lastName: 'Lewis',
+    gender: 'Female', // <= Gender is FEMALE
+    birthday: 'May 15th, 1979',
+    age: 37,
+    avatar: 'https://api.adorable.io/avatars/200/Julie-Lewis',
+    address: '234 E. Bridle Ave., Gloucester, MA 01930',
+    phone: '(766) 519-6284',
+    email: 'ruszon@mo.et',
+    twitter: '@seef',
+    ssn: '000-46-2316'
+}
+*/
+```
 
 ### name()
-Returns a random name with first name and last name.
+Returns a random name with first name and last name. Also can provide `string` arguments `male` or `female` to return a Male or Female name.
 
 ```js
 var name = randomProfile.name();
@@ -68,6 +118,30 @@ console.log(name);
 
 // Output
 // => Michael Ruiz
+
+var maleName = randomProfile.name('male');
+console.log(maleName);
+
+// Output
+// => Emerson Nicholson
+
+var femaleName = randomProfile.name('female');
+console.log(femaleName);
+
+// Output
+// => Julie Lewis
+```
+
+
+### gender()
+Returns a random gender, return value being Male or Female
+
+```js
+var gender = randomProfile.gender();
+console.log(gender);
+
+// Output
+// => Male // or Female
 ```
 
 
