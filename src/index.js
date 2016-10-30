@@ -48,6 +48,10 @@ function profile(gender) {
     profile.age = today.diff(bDay, 'years');
     profile.avatar = avatarBase + fullName.replace(/ /g, '-');
     profile.address = uniqueRandomArray(allAddresses)();
+
+    let addressParts = profile.address.split(' ');
+    profile.zip = addressParts[addressParts.length - 1];
+    profile.state = addressParts[addressParts.length - 2];
     profile.phone = chance.phone();
     profile.email = chance.email();
     profile.twitter = chance.twitter();
@@ -88,11 +92,21 @@ function gender() {
     return chance.gender();
 }
 
+function zip() {
+    return chance.zip();
+}
+
+function state() {
+    return chance.state();
+}
+
 module.exports = {
     profile,
     name,
     gender,
     address,
+    zip,
+    state,
     birthday,
     age,
     avatar,

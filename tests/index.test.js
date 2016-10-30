@@ -84,6 +84,28 @@ describe('Random Profile Generator', () => {
             expect(randomProfiles.profile().address).to.be.a('string');
         });
 
+        it('Should contain `zip` property, it should a string and a valid zip code', () => {
+            expect(randomProfiles.profile()).to.have.property('zip');
+            expect(randomProfiles.profile().zip).to.be.a('string');
+            expect(randomProfiles.profile().zip).to.match(/^\d{5}(\-?\d{4})?$/);
+        });
+
+        it('Should contain the value of `zip` property, as part of the `address`', () => {
+            let profile = randomProfiles.profile();
+            expect(profile.address).to.include(profile.zip);
+        });
+
+        it('Should contain `state` property, it should a string and be a valid state', () => {
+            expect(randomProfiles.profile()).to.have.property('state');
+            expect(randomProfiles.profile().state).to.be.a('string');
+            expect(randomProfiles.profile().state).to.match(/^((A[AEKLPRSZ])|(C[AOT])|(D[EC])|(F[LM])|(G[AU])|(HI)|(I[ADLN])|(K[SY])|(LA)|(M[ADEHINOST])|(N[CDEHJMVY])|(MP)|(O[HKR])|(P[ARW])|(RI)|(S[CD])|(T[NX])|(UT)|(V[AIT])|(W[AIVY]))$/);
+        });
+
+        it('Should contain the value of `state` property, as part of the `address`', () => {
+            let profile = randomProfiles.profile();
+            expect(profile.address).to.include(profile.state);
+        });
+
         it('Should contain `phone` property, it should a string and a valid US Phone number', () => {
             expect(randomProfiles.profile()).to.have.property('phone');
             expect(randomProfiles.profile().phone).to.be.a('string');
@@ -161,6 +183,34 @@ describe('Random Profile Generator', () => {
 
         it('Should include in the names array', () => {
             expect(allAddresses).to.include(randomProfiles.address()); 
+        });
+    });
+
+    describe('Calling `state', () => {
+        it('Should be a function', () => {
+            expect(randomProfiles.state).to.be.a('function'); 
+        });
+
+        it('Should return a string', () => {
+            expect(randomProfiles.state()).to.be.a('string');
+        });
+
+        it('Should be a valid state code', () => {
+            expect(randomProfiles.state()).to.match(/^((A[AEKLPRSZ])|(C[AOT])|(D[EC])|(F[LM])|(G[AU])|(HI)|(I[ADLN])|(K[SY])|(LA)|(M[ADEHINOST])|(N[CDEHJMVY])|(MP)|(O[HKR])|(P[ARW])|(RI)|(S[CD])|(T[NX])|(UT)|(V[AIT])|(W[AIVY]))$/);
+        });
+    });
+
+    describe('Calling `zip', () => {
+        it('Should be a function', () => {
+            expect(randomProfiles.zip).to.be.a('function'); 
+        });
+
+        it('Should return a string', () => {
+            expect(randomProfiles.zip()).to.be.a('string');
+        });
+
+        it('Should be a valid zip code', () => {
+            expect(randomProfiles.zip()).to.match(/^\d{5}(\-?\d{4})?$/);
         });
     });
 
