@@ -9,6 +9,8 @@ node_js:
   - '4'
 before_install:
   - npm i -g npm@^2.0.0
+install:
+  - npm install -g codecov
 before_script:
   - npm prune
 script:
