@@ -53,7 +53,8 @@ console.log(profile);
     address: '49 Foxrun St., Manchester Township, NJ 08759',
     phone: '(876) 547-1223',
     email: 'cedi@to.cc',
-    twitter: '@wunwegda'
+    twitter: '@wunwegda',
+    ssn: '744-48-5102'
 }
 */
 ```
