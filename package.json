@@ -7,7 +7,7 @@
     "commit": "git-cz",
     "prebuild": "rimraf dist",
     "build": "babel --out-dir dist --source-maps --ignore *.test.js src",
-    "test": "./node_modules/.bin/_mocha tests/index.test.js --compilers js:babel-register --reporter spec",
+    "test": "./node_modules/.bin/_mocha tests/index.test.js --compilers js:babel-register -R spec",
     "test:local": "npm test -- -w",
     "cover": "nyc --reporter=lcov npm test",
     "check-coverage": "nyc check-coverage --statements 100 --branches 100 --functions 100 --lines 100",
