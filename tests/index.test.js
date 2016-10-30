@@ -2,6 +2,8 @@ import { expect } from 'chai';
 import randomProfiles from '../src/index';
 import allNames from '../data/names.json';
 import allAddresses from '../data/addresses.json';
+import allFemaleNames from '../data/femaleNames.json';
+import allMaleNames from '../data/maleNames.json';
 
 describe('Random Profile Generator', () => {
     describe('Calling `profile`', () => {
@@ -18,6 +20,22 @@ describe('Random Profile Generator', () => {
             expect(randomProfiles.profile().fullName).to.be.a('string');
         });
 
+        it('Should be from male names when argument is `male`', () => {
+           expect(allMaleNames).to.include(randomProfiles.profile('male').fullName);
+        });
+
+        it('Should be from female names when argument is `female`', () => {
+           expect(allFemaleNames).to.include(randomProfiles.profile('female').fullName);
+        });
+
+        it('Should be from female names when argument is invalid', () => {
+           expect(allNames).to.include(randomProfiles.profile('invalid').fullName);
+        });
+
+        it('Should be from all names when argument is not provided', () => {
+           expect(allNames).to.include(randomProfiles.profile().fullName);
+        });
+
         it('Should contain `firstName` property, it should a string', () => {
             expect(randomProfiles.profile()).to.have.property('firstName');
             expect(randomProfiles.profile().firstName).to.be.a('string');
@@ -26,6 +44,23 @@ describe('Random Profile Generator', () => {
         it('Should contain `lastName` property, it should a string', () => {
             expect(randomProfiles.profile()).to.have.property('lastName');
             expect(randomProfiles.profile().lastName).to.be.a('string');
+        });
+
+        it('Should contain `gender` property, it should a string', () => {
+            expect(randomProfiles.profile()).to.have.property('gender');
+            expect(randomProfiles.profile().gender).to.be.a('string');
+        });
+
+        it('Should be Male when argument is `male`', () => {
+           expect(randomProfiles.profile('male').gender).to.eql('Male');
+        });
+
+        it('Should be Female when argument is `female`', () => {
+           expect(randomProfiles.profile('female').gender).to.eql('Female');
+        });
+
+        it('Should be Male or Female when argument is not provided', () => {
+           expect(randomProfiles.profile().gender).to.match(/^(Male|Female)$/);
         });
 
         it('Should contain `birthday` property, it should be a string', () => {
@@ -85,6 +120,33 @@ describe('Random Profile Generator', () => {
 
         it('Should include in the names array', () => {
             expect(allNames).to.include(randomProfiles.name()); 
+        });
+
+        it('Should include in the female names array when called with `female`', () => {
+            expect(allFemaleNames).to.include(randomProfiles.name('female')); 
+        });
+        
+        it('Should include in the male names array when called with `male`', () => {
+            expect(allMaleNames).to.include(randomProfiles.name('male')); 
+        });
+
+        it('Should include in the names array when called with invalud arguments', () => {
+            expect(allNames).to.include(randomProfiles.name('invalid')); 
+        });
+
+    });
+
+    describe('Calling `gender`', () => {
+        it('Should be a function', () => {
+            expect(randomProfiles.gender).to.be.a('function'); 
+        });
+
+        it('Should return a string', () => {
+            expect(randomProfiles.gender()).to.be.a('string');
+        });
+
+        it('Should be Male or Female', () => {
+           expect(randomProfiles.gender()).to.match(/^(Male|Female)$/);
         });
     });
 
