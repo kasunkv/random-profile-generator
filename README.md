@@ -91,7 +91,7 @@ console.log(profile);
 ### Calling with argument `female`
 
 ```js
-var profile = randomProfile.profile('male');
+var profile = randomProfile.profile('female');
 console.log(profile);
 
 // Output
