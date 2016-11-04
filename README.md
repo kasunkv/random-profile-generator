@@ -44,6 +44,7 @@ console.log(profile);
 // Output
 /*
 { 
+    id: 'dc3800ea-0ae8-592a-bcd6-2012667c3ccc',
     fullName: 'Della Edwards',
     firstName: 'Della',
     lastName: 'Edwards',
@@ -71,6 +72,7 @@ console.log(profile);
 // Output
 /*
 { 
+    id: '137b6d33-51f2-5994-8250-92667dc5679d',
     fullName: 'Emerson Nicholson', // <= Fullname is MALE name.
     firstName: 'Emerson',
     lastName: 'Nicholson',
@@ -97,6 +99,7 @@ console.log(profile);
 // Output
 /*
 { 
+    id: 'b0443ec8-4a00-55aa-8f74-6af0b6c26e17',
     fullName: 'Julie Lewis', // <= Fullname is FEMALE name.
     firstName: 'Julie',
     lastName: 'Lewis',
@@ -268,6 +271,18 @@ console.log(twitterHandle);
 
 // Output
 // => @hanaha
+```
+
+
+### guid()
+Returns a random GUID.
+
+```js
+var guid = randomProfile.guid();
+console.log(guid);
+
+// Output
+// => b0443ec8-4a00-55aa-8f74-6af0b6c26e17
 ```
 
 
