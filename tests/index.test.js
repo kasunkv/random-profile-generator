@@ -15,6 +15,12 @@ describe('Random Profile Generator', () => {
             expect(randomProfiles.profile()).to.be.a('object');
         });  
 
+        it('Should contain `id` property, it should a string that is a GUID', () => {
+            expect(randomProfiles.profile()).to.have.property('id');
+            expect(randomProfiles.profile().id).to.be.a('string');
+            expect(randomProfiles.profile().id).to.match(/[\da-zA-Z]{8}-([\da-zA-Z]{4}-){3}[\da-zA-Z]{12}/);
+        });
+
         it('Should contain `fullName` property, it should a string', () => {
             expect(randomProfiles.profile()).to.have.property('fullName');
             expect(randomProfiles.profile().fullName).to.be.a('string');
@@ -307,4 +313,19 @@ describe('Random Profile Generator', () => {
             expect(randomProfiles.ssn()).to.match(/(\d{3}[-]\d{2}[-]\d{4})/);
         });
     }); 
+
+    describe('Calling `guid', () => {
+        it('Should be a function', () => {
+            expect(randomProfiles.guid).to.be.a('function'); 
+        });
+
+        it('Should return a string', () => {
+            expect(randomProfiles.guid()).to.be.a('string');
+        });
+
+        it('Should be a valid GUID', () => {
+            expect(randomProfiles.guid()).to.match(/[\da-zA-Z]{8}-([\da-zA-Z]{4}-){3}[\da-zA-Z]{12}/);
+        });
+    });
+
 });
