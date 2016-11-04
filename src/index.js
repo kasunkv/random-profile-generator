@@ -40,6 +40,7 @@ function profile(gender) {
         profileGender = 'Female';
     }
 
+    profile.id = chance.guid();    
     profile.fullName = fullName;
     profile.firstName = fullName.split(' ')[0];
     profile.lastName = fullName.split(' ')[1];
@@ -100,6 +101,10 @@ function state() {
     return chance.state();
 }
 
+function guid() {
+    return chance.guid();
+}
+
 module.exports = {
     profile,
     name,
@@ -113,5 +118,6 @@ module.exports = {
     phone,
     email,
     twitter,
-    ssn
+    ssn,
+    guid
 };
