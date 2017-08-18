@@ -141,7 +141,6 @@ console.log(femaleName);
 // => Julie Lewis
 ```
 
-
 ### gender()
 Returns a random gender, return value being Male or Female
 
@@ -152,7 +151,6 @@ console.log(gender);
 // Output
 // => Male // or Female
 ```
-
 
 ### address()
 Returns a random address with street, city, State and Zip Code
@@ -165,7 +163,6 @@ console.log(address);
 // => 87 North Constitution Circle, Rochester, NY 14606
 ```
 
-
 ### zip()
 Returns a random US Zip code
 
@@ -176,7 +173,6 @@ console.log(zip);
 // Output
 // => 14606
 ```
-
 
 ### state()
 Returns a random 2 letter abbreviation for US state
@@ -189,7 +185,6 @@ console.log(state);
 // => NY
 ```
 
-
 ### birthday()
 Returns a random birthday in the `MMM Do[,] YYYY` format.
 
@@ -200,7 +195,6 @@ console.log(birthday);
 // Output
 // => Mar 12th, 1991
 ```
-
 
 ### age()
 Returns a random age.
@@ -213,7 +207,6 @@ console.log(age);
 // => 25
 ```
 
-
 ### avatar()
 Returns a random avatar url generated from adorable.io API with a 200 x 200px size.
 
@@ -224,7 +217,6 @@ console.log(avatar);
 // Output
 // => https://api.adorable.io/avatars/200/Wendy-Conner
 ```
-
 
 ### phone()
 Returns a random phone number with US Phone Number Format.
@@ -237,7 +229,6 @@ console.log(phone);
 // => (717) 238-3496
 ```
 
-
 ### email()
 Returns a random syntactically valid email address.
 
@@ -249,7 +240,6 @@ console.log(email);
 // => cin@unepwa.cx
 ```
 
-
 ### ssn()
 Returns a random SSN.
 
@@ -260,7 +250,6 @@ console.log(ssn);
 // Output
 // => 411-90-0070
 ```
-
 
 ### twitter()
 Returns a random twitter handle.
@@ -285,7 +274,6 @@ console.log(guid);
 // => b0443ec8-4a00-55aa-8f74-6af0b6c26e17
 ```
 
-
 # Contributing
 All contributions from the GitHub community are welcome.
 
@@ -294,7 +282,6 @@ All contributions from the GitHub community are welcome.
 * Commit your changes: `npm run commit` (Uses Commitizen Conventional Changelog for commits)
 * Push to the branch: `git push origin new-feature`
 * Submit a Pull Request
-
 
 ## Installing Dependencies
 
@@ -347,7 +334,6 @@ $ git add <FILES_TO_COMMIT>
 # Use the configured ghook
 $ npm run commit
 ```
-
 
 # Credits
 Random Profile Generator uses some 3rd party packages and APIs for its development. Credit goes to their creators & contributors.
