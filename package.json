@@ -37,7 +37,7 @@
   "homepage": "https://github.com/kasunkv/random-profile-generator#readme",
   "dependencies": {
     "chance": "1.0.4",
-    "moment": "2.15.2",
+    "moment": "^2.24.0",
     "unique-random-array": "1.0.0"
   },
   "devDependencies": {
